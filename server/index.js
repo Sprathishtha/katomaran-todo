@@ -32,3 +32,5 @@ app.use('/auth', googleRoutes); // ✅ enable Google login
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+const googleRoutes = require('./routes/authGoogle');
+app.use('/auth', googleRoutes); // ✅ This enables /auth/google
